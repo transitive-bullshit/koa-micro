@@ -1,10 +1,14 @@
 {
   "name": "@automagical/micro",
   "version": "1.0.0",
+  "description": "Koa 2 microservices with batteries included.",
   "main": "index.js",
-  "repository": "automagical-ai/micro",
-  "author": "Automagical <dev@automagical.ai>",
-  "license": "UNLICENSED",
+  "repository": "transitive-bullshit/koa-micro",
+  "author": "Travis Fischer <travis@automagical.ai>",
+  "license": "MIT",
+  "engines": {
+    "node": ">=8"
+  },
   "scripts": {
     "test": "NODE_ENV=test mocha './{,!(node_modules)/**/}*.test.js'",
     "test:watch": "NODE_ENV=test mocha './{,!(node_modules)/**/}*.test.js' --watch"
