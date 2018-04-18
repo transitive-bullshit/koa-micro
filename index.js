@@ -28,3 +28,5 @@ module.exports = () => {
 
   return app
 }
+
+module.exports.logger = logger
