@@ -45,8 +45,8 @@ process.on('SIGINT', () => server.close())
   * Context utility `assertFound`
   * Context utility `assertParam`
   * Context utility `success`
-  * Logger supporting [Google Cloud Trace](https://console.cloud.google.com/traces/traces?project=infinite-hope-145120&start=1488614433575&end=1488700833575)
-  * Error handler middleware with [Google Cloud Errors](https://console.cloud.google.com/errors?time=PT1H&refresh=off&order=COUNT_DESC&project=infinite-hope-145120)
+  * Logger supporting [Google Cloud Trace](https://cloud.google.com/trace/)
+  * Error handler middleware with [Google Cloud Errors](https://cloud.google.com/error-reporting/)
   * Access logs middleware
   * Response time middleware
   * CORS middleware
