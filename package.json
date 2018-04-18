@@ -1,0 +1,44 @@
+{
+  "name": "@automagical/micro",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "automagical-ai/micro",
+  "author": "Automagical <dev@automagical.ai>",
+  "license": "UNLICENSED",
+  "scripts": {
+    "test": "NODE_ENV=test mocha './{,!(node_modules)/**/}*.test.js'",
+    "test:watch": "NODE_ENV=test mocha './{,!(node_modules)/**/}*.test.js' --watch"
+  },
+  "dependencies": {
+    "@google-cloud/debug-agent": "^2.5.0",
+    "@google-cloud/error-reporting": "^0.4.0",
+    "@google-cloud/trace-agent": "^2.7.2",
+    "config": "^1.30.0",
+    "koa": "^2.5.0",
+    "koa-compress": "^3.0.0",
+    "koa-qs": "^2.0.0",
+    "to-camel-case": "^1.0.0",
+    "winston": "^2.4.1"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "delay": "2.0.0",
+    "mocha": "^5.1.0",
+    "mocha-standard": "^1.0.0",
+    "request": "^2.85.0",
+    "request-promise-native": "^1.0.5",
+    "sinon": "^4.5.0",
+    "standard": "^11.0.1"
+  },
+  "standard": {
+    "globals": [
+      "after",
+      "afterEach",
+      "before",
+      "beforeEach",
+      "context",
+      "describe",
+      "it"
+    ]
+  }
+}
