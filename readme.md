@@ -2,7 +2,7 @@
 
 > [Koa 2](http://koajs.com/) microservices with batteries included.
 
-[![NPM](https://img.shields.io/npm/v/koa-micro.svg)](https://www.npmjs.com/package/koa-micro) [![Build Status](https://travis-ci.org/transitive-bullshit/koa-micro.svg?branch=master)](https://travis-ci.org/transitive-bullshit/koa-micro) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![NPM](https://img.shields.io/npm/v/koa-micro.svg)](https://www.npmjs.com/package/koa-micro) [![Build Status](https://travis-ci.com/transitive-bullshit/koa-micro.svg?branch=master)](https://travis-ci.com/transitive-bullshit/koa-micro) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 ## Installation
 
