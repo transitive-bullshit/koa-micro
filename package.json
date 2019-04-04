@@ -14,9 +14,9 @@
     "test:watch": "NODE_ENV=test mocha './{,!(node_modules)/**/}*.test.js' --watch"
   },
   "dependencies": {
-    "@google-cloud/debug-agent": "^2.6.0",
+    "@google-cloud/debug-agent": "2.6.0",
     "@google-cloud/error-reporting": "0.4.0",
-    "@google-cloud/trace-agent": "^2.11.0",
+    "@google-cloud/trace-agent": "2.11.0",
     "config": "^1.30.0",
     "koa": "^2.7.0",
     "koa-compress": "^3.0.0",
