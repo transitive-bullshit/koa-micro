@@ -14,9 +14,9 @@
     "test:watch": "NODE_ENV=test mocha './{,!(node_modules)/**/}*.test.js' --watch"
   },
   "dependencies": {
-    "@google-cloud/debug-agent": "^2.5.0",
-    "@google-cloud/error-reporting": "^0.4.0",
-    "@google-cloud/trace-agent": "^2.7.2",
+    "@google-cloud/debug-agent": "^2.6.0",
+    "@google-cloud/error-reporting": "0.4.0",
+    "@google-cloud/trace-agent": "^2.11.0",
     "config": "^1.30.0",
     "koa": "^2.7.0",
     "koa-compress": "^3.0.0",
@@ -25,12 +25,12 @@
     "winston": "^2.4.1"
   },
   "devDependencies": {
-    "chai": "^4.1.2",
-    "delay": "2.0.0",
+    "chai": "^4.2.0",
+    "delay": "^2.0.0",
     "mocha": "^5.2.0",
     "mocha-standard": "^1.0.0",
     "request": "^2.88.0",
-    "request-promise-native": "^1.0.5",
+    "request-promise-native": "^1.0.7",
     "sinon": "^4.5.0",
     "standard": "^12.0.1"
   },

@@ -7,12 +7,12 @@ const app = require('./')()
 describe('app()', () => {
   let server
 
-  before((done) => { server = app.listen(5001, done) })
+  before((done) => { server = app.listen(5002, done) })
   after((done) => server.close(done))
 
   it('should listen', async () => {
     const response = await request.get({
-      uri: 'http://localhost:5001',
+      uri: 'http://localhost:5002',
       resolveWithFullResponse: true,
       simple: false
     })
