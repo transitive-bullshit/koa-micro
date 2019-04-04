@@ -46,7 +46,7 @@
     stream-events "^1.0.4"
     through2 "^2.0.3"
 
-"@google-cloud/debug-agent@^2.6.0":
+"@google-cloud/debug-agent@2.6.0":
   version "2.6.0"
   resolved "https://registry.yarnpkg.com/@google-cloud/debug-agent/-/debug-agent-2.6.0.tgz#130e84226bc9538acd097adb5590da2ff4f2da66"
   integrity sha512-JwnuHNOqpLgtirMUSp+vOJxIjQfQ8DRfkGbEjUg5/Nhg8zDEz8H8Oo3s2Tuknkk1XkmPHpoKfz+6raD5NgEzZw==
@@ -73,7 +73,7 @@
     is "^3.2.0"
     lodash.has "^4.5.2"
 
-"@google-cloud/trace-agent@^2.11.0":
+"@google-cloud/trace-agent@2.11.0":
   version "2.11.0"
   resolved "https://registry.yarnpkg.com/@google-cloud/trace-agent/-/trace-agent-2.11.0.tgz#5a01566b7a2c393e7e3bb5f3e31c76323576e948"
   integrity sha512-35gJYIrMmaG9ZT7t+UrGVV/+4tMFiWipxFqyjSEcdPOk3uVJo7EDJ72uFGl1G+A4u13y4Obk3Wpc5AL1TxH//Q==
