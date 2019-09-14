@@ -1,6 +1,6 @@
 {
   "name": "koa-micro",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Koa 2 microservices with batteries included.",
   "main": "index.js",
   "repository": "transitive-bullshit/koa-micro",
