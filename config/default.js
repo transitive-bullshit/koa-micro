@@ -1,5 +1,7 @@
 'use strict'
 
+const winston = require('winston')
+
 module.exports = {
   api: {
     uri: '',
@@ -28,7 +30,9 @@ module.exports = {
     }
   },
   logger: {
-    json: true,
-    stringify: true
+    format: winston.format.combine(
+      winston.format.colorize(),
+      winston.format.simple()
+    )
   }
 }
