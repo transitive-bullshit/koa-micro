@@ -16,6 +16,7 @@
   "dependencies": {
     "@google-cloud/debug-agent": "2.6.0",
     "@google-cloud/error-reporting": "0.4.0",
+    "@google-cloud/logging-winston": "^3.0.0",
     "@google-cloud/trace-agent": "2.11.0",
     "@koa/cors": "^3.0.0",
     "config": "^1.30.0",
@@ -23,11 +24,11 @@
     "koa-compress": "^3.0.0",
     "koa-qs": "^2.0.0",
     "to-camel-case": "^1.0.0",
-    "winston": "^2.4.1"
+    "winston": "^3.2.1"
   },
   "devDependencies": {
     "chai": "^4.2.0",
-    "delay": "^2.0.0",
+    "delay": "^4.3.0",
     "mocha": "^5.2.0",
     "mocha-standard": "^1.0.0",
     "request": "^2.88.0",
