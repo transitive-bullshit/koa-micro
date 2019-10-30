@@ -8,6 +8,7 @@ module.exports = {
   cloudDebug: false,
   cloudTrace: false,
   cloudErrors: false,
+  cloudLogging: false,
   logger: {
     silent: true
   }
