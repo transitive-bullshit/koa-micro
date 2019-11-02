@@ -1,6 +1,13 @@
 'use strict'
 
 const winston = require('winston')
+const { LEVEL, MESSAGE, SPLAT } = require('triple-beam')
+
+const normal = winston.format.combine(
+  winston.format.colorize(),
+  winston.format.simple()
+)
+const prettyPrint = winston.format.prettyPrint({ colorize: true })
 
 module.exports = {
   api: {
@@ -30,9 +37,24 @@ module.exports = {
     }
   },
   logger: {
-    format: winston.format.combine(
-      winston.format.colorize(),
-      winston.format.simple()
-    )
+    format: winston.format((info, opts) => {
+      if (info.message) {
+        return normal.transform(info, { })
+      } else {
+        const { level, ...rest } = info
+        const l = info[LEVEL]
+        const m = info[MESSAGE]
+        const s = info[SPLAT]
+        const message = prettyPrint.transform(rest, { colorize: true })
+
+        return normal.transform({
+          level,
+          [LEVEL]: l,
+          [MESSAGE]: m,
+          [SPLAT]: s,
+          message: message[MESSAGE]
+        }, { })
+      }
+    })()
   }
 }
