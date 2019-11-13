@@ -42,7 +42,7 @@ module.exports = {
       // useful for debugging the logging messages
       // console.log('LOG', util.inspect(info), util.inspect(opts))
 
-      if (info.message && typeof info.message === 'string') {
+      if (info.message && typeof info.message !== 'object') {
         if (info[SPLAT]) {
           info.message = `${info.message} ${util.inspect(...info[SPLAT])}`
         }
@@ -51,7 +51,6 @@ module.exports = {
       } else {
         let { level, ...rest } = info
         const l = info[LEVEL]
-        const m = info[MESSAGE]
         const s = info[SPLAT]
 
         if (Object.keys(rest).length === 1 && rest.message) {
@@ -59,17 +58,13 @@ module.exports = {
         }
 
         const pretty = prettyPrint.transform(rest, { colorize: true })
-        let message = pretty[MESSAGE]
-
-        if (s) {
-          message = `${message} ${util.inspect(...s)}`
-        }
+        const message = pretty[MESSAGE]
 
         return normal.transform(
           {
             level,
             [LEVEL]: l,
-            [MESSAGE]: m,
+            [MESSAGE]: message,
             [SPLAT]: s,
             message
           },
