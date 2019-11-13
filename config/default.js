@@ -38,22 +38,32 @@ module.exports = {
   },
   logger: {
     format: winston.format((info, opts) => {
-      if (info.message) {
-        return normal.transform(info, { })
+      // console.log('LOG', util.inspect(info))
+
+      if (info.message && typeof info.message === 'string') {
+        return normal.transform(info, {})
       } else {
-        const { level, ...rest } = info
+        let { level, ...rest } = info
         const l = info[LEVEL]
         const m = info[MESSAGE]
         const s = info[SPLAT]
+
+        if (Object.keys(rest).length === 1 && rest.message) {
+          rest = rest.message
+        }
+
         const message = prettyPrint.transform(rest, { colorize: true })
 
-        return normal.transform({
-          level,
-          [LEVEL]: l,
-          [MESSAGE]: m,
-          [SPLAT]: s,
-          message: message[MESSAGE]
-        }, { })
+        return normal.transform(
+          {
+            level,
+            [LEVEL]: l,
+            [MESSAGE]: m,
+            [SPLAT]: s,
+            message: message[MESSAGE]
+          },
+          {}
+        )
       }
     })()
   }
