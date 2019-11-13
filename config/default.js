@@ -1,5 +1,6 @@
 'use strict'
 
+const util = require('util')
 const winston = require('winston')
 const { LEVEL, MESSAGE, SPLAT } = require('triple-beam')
 
@@ -38,9 +39,14 @@ module.exports = {
   },
   logger: {
     format: winston.format((info, opts) => {
-      // console.log('LOG', util.inspect(info))
+      // useful for debugging the logging messages
+      // console.log('LOG', util.inspect(info), util.inspect(opts))
 
       if (info.message && typeof info.message === 'string') {
+        if (info[SPLAT]) {
+          info.message = `${info.message} ${util.inspect(...info[SPLAT])}`
+        }
+
         return normal.transform(info, {})
       } else {
         let { level, ...rest } = info
