@@ -58,7 +58,12 @@ module.exports = {
           rest = rest.message
         }
 
-        const message = prettyPrint.transform(rest, { colorize: true })
+        const pretty = prettyPrint.transform(rest, { colorize: true })
+        let message = pretty[MESSAGE]
+
+        if (s) {
+          message = `${message} ${util.inspect(...s)}`
+        }
 
         return normal.transform(
           {
@@ -66,7 +71,7 @@ module.exports = {
             [LEVEL]: l,
             [MESSAGE]: m,
             [SPLAT]: s,
-            message: message[MESSAGE]
+            message
           },
           {}
         )
