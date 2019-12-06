@@ -19,8 +19,12 @@ module.exports = () => {
   app.context.success = context.success
 
   app.use(middleware.accessLogs(logger))
-  app.use(middleware.errorHandler({ exposeStackTraces: config.get('api.exposeStackTraces') }))
   app.use(middleware.responseTime())
+  app.use(
+    middleware.errorHandler({
+      exposeStackTraces: config.get('api.exposeStackTraces')
+    })
+  )
   app.use(middleware.cors())
   app.use(middleware.options())
   app.use(compress())
