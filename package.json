@@ -15,8 +15,8 @@
   },
   "dependencies": {
     "@google-cloud/debug-agent": "^4.0.4",
-    "@google-cloud/error-reporting": "^1.1.2",
-    "@google-cloud/logging-winston": "^3.0.0",
+    "@google-cloud/error-reporting": "^2.0.2",
+    "@google-cloud/logging-winston": "^4.0.5",
     "@google-cloud/trace-agent": "^4.2.2",
     "@koa/cors": "^3.0.0",
     "config": "^1.30.0",
